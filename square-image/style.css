@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.image-box {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.add-overlay {
+  position: relative;
+}
+.add-overlay::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 99, 71, 0.219);
+  transition: 0.2s ease-in-out;
+}
+.image-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-box h2 {
+  color: #fff;
+  z-index: 1;
+}
+.add-overlay:hover::after {
+  background-color: rgba(255, 99, 71, 0);
+}
+/* =====PSEUDO selectors======= */
+
+.title::after {
+  content: ">>";
+}
+.title::before {
+  content: "<<";
+}
